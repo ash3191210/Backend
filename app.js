@@ -16,7 +16,11 @@ const headers = {
     'content-type': 'application/json',
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
 };
-
+app.get('/',(re,res)=>{
+    res.json({
+        "hello":"from aniket"
+    })
+})
 app.post('/search-flights', async (req, res) => {
     const { origin, destination, cabinSelection } = req.body;
 
